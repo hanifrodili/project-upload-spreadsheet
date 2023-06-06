@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table {
+  @apply text-left text-black table-auto w-full border rounded-2xl overflow-hidden
+}
+
+table.striped>tbody tr:nth-child(even) {
+  @apply bg-gray-100 !important
+}
+
+.table-list {
+  @apply shadow-md mb-3
+}
+
+.table-list th,
+.table-list td {
+  @apply py-3 px-4
+}
+
+.table-list thead {
+  @apply bg-gray-700 text-gray-50
+}
