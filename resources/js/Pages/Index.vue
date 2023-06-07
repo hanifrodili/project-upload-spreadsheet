@@ -47,7 +47,7 @@ const uploadFile = async () => {
           name: obj["Name"],
           level: obj["Level"],
           class: obj["Class"],
-          parent_contact: sanitizePhoneNumber(obj["Parents Contact"])
+          parent_contact: sanitizePhoneNumber(obj["Parent Contact"])
         }
         addStudent(newObj)
       });
