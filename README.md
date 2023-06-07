@@ -1,3 +1,7 @@
+## Requirements
+- Docker
+- Laravel Sail
+
 ## Project setup
 ```
 composer install
