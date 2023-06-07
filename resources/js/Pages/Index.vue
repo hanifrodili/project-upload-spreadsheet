@@ -2,9 +2,10 @@
 .index
   div.p-10.mt-10.w-full
     h1.mb-2.font-black.text-lg Upload from file
-    p.capitalize.mb-5.text-gray-500.underline Download excel template
+    a(href="../files/student_template.xls") 
+      p.capitalize.mb-5.text-gray-500.underline Download excel template
     div.flex.flex-col
-      input.mb-5(class="relative m-0 w-full min-w-0 flex flex-row-reverse rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" id="file_input" type="file" ref="file")
+      input.mb-5(class="relative m-0 w-full min-w-0 flex flex-row-reverse rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" id="file_input" type="file" ref="file" accept=".xls,.xlsx,.csv")
       div.flex.flex-row.gap-3
         button.py-2.px-4.border.rounded-lg.border-purple-600.text-purple-600.flex-grow.uppercase(class="min-h-[32px] disabled:text-gray-300 disabled:border-gray-300" @click="uploadFile()" :disabled="loading") Upload
         button.py-2.px-4.border.rounded-lg.border-red-600.text-red-600.flex-grow.uppercase(class="min-h-[32px] disabled:text-gray-300 disabled:border-gray-300" @click="file.value = null" :disabled="loading") Cancel
